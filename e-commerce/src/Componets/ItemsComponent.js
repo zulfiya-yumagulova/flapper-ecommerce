@@ -28,14 +28,16 @@ function ItemsComponent() {
     <>
       <header>
         <h2>Welcome To E-Commerce Shop</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Search..."
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <button>Search</button>
-        </form>
+        <div className="search">
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Search..."
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <button>Search</button>
+          </form>
+        </div>
       </header>
       <div className="display-grid">
         {Array.from(items)
