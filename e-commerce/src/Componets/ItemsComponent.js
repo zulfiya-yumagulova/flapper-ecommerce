@@ -4,6 +4,7 @@ import "./ItemComponent.css";
 function ItemsComponent() {
   const [items, setItems] = useState([]);
   const [search, setSearch] = useState("");
+  const [filterItems, setFilterItems] = useState(items);
 
   // Fetching Data
   useEffect(() => {
@@ -27,7 +28,9 @@ function ItemsComponent() {
   return (
     <>
       <header>
-        <h2>Welcome To E-Commerce Shop</h2>
+        <div className="overlay">
+          <h2>Welcome To E-Commerce Shop</h2>
+        </div>
         <div className="search">
           <form onSubmit={handleSubmit}>
             <input
@@ -35,8 +38,15 @@ function ItemsComponent() {
               placeholder="Search..."
               onChange={(e) => setSearch(e.target.value)}
             />
-            <button>Search</button>
+            <button className="btn-light btn-search">Search</button>
           </form>
+        </div>
+        <div className="categories">
+          <button className="btn-dark category">All</button>
+          <button className="btn-dark category">Men's Clothing</button>
+          <button className="btn-dark category">Women's Closing</button>
+          <button className="btn-dark category">Jewelery</button>
+          <button className="btn-dark category">Electronics</button>
         </div>
       </header>
       <div className="display-grid">
@@ -55,8 +65,13 @@ function ItemsComponent() {
               <div className="card">
                 <p className="title">{item.title}</p>
                 <img src={item.image} />
-                <p className="description">{item.description}</p>
+                {/* <p className="description">{item.description}</p> */}
                 <p className="price">£ {item.price}</p>
+                <button className="btn-dark btn-buy">
+                  <a href="#" className="btn-link">
+                    Buy Now
+                  </a>
+                </button>
               </div>
             </div>
           ))}

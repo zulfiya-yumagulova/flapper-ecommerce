@@ -12,10 +12,65 @@
   --primary-color: #ffff;
   --primary-dark-color: #3a3845;
   --secondary-dark-color: #000000;
+  --btn-light-color: #efefef;
   --shadow-color: rgba(88 88 88 88 / 20%);
 }
 
 body {
   font-family: "Lato", sans-serif;
   color: var(--color-font);
+}
+
+/* header {
+  background-image: url("https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fHdvbWVuJTIwY2xvdGhlcyUyMHNob3BwaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+  background-size: "cover";
+  background-repeat: "no-repeat";
+  height: 400px;
+}
+
+header .overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 1.6px;
+} */
+
+.btn-light {
+  background-color: var(--btn-light-color);
+  border-radius: 8px;
+  border-width: 0;
+  color: var(--primary-dark-color);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+}
+
+.btn-dark {
+  background-color: var(--primary-dark-color);
+  border-radius: 8px;
+  border-width: 0;
+  color: var(--btn-light-color);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
 }

@@ -3,6 +3,23 @@ h2 {
   margin: 30px 0 auto auto;
 }
 
+/* Categories Style */
+.categories {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.category {
+  margin: 0 20px;
+}
+
+.category:hover {
+  background-color: var(--btn-light-color);
+  color: var(--primary-dark-color);
+  transition: 0.7;
+}
+
 /* Creating Item Card */
 .display-grid {
   display: grid;
@@ -28,14 +45,33 @@ img {
   display: block;
   width: 100%;
   max-width: 200px;
-  height: auto;
-  margin: 10px 0;
+  /* height: 350px; */
+  margin: 20px 0;
 }
 
 .price {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 700;
 }
 
-/* Style Input */
+.title {
+  text-align: center;
+  margin: 30px 15px;
+  font-size: 18px;
+}
+
+.btn-link {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.btn-buy:hover {
+  background-color: var(--secondary-dark-color);
+  transition: 0.7;
+}
+
+/* Style Search Bar */
 
 .search {
   display: flex;
@@ -57,24 +93,8 @@ input:focus {
   box-shadow: 0 5px 20px rgba(88 88 88 /20%);
 }
 
-button {
-  background-color: #efefef;
-  border-radius: 8px;
-  border-width: 0;
-  color: var(--primary-dark-color);
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 17px;
-  list-style: none;
-  margin: 0;
-  padding: 10px 12px;
-  text-align: center;
-  transition: all 200ms;
-}
-
-button:hover {
+.btn-search:hover {
   background-color: var(--secondary-dark-color);
   color: var(--primary-color);
+  transition: 0.7;
 }
