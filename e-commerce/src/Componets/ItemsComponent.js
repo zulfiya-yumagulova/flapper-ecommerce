@@ -25,6 +25,11 @@ function ItemsComponent() {
     e.preventDefault();
   };
 
+  const filterProduct = (cat) => {
+    const updatedList = items.filter((item) => item.category === cat);
+    setFilterItems(updatedList);
+  };
+
   return (
     <>
       <header>
@@ -42,11 +47,36 @@ function ItemsComponent() {
           </form>
         </div>
         <div className="categories">
-          <button className="btn-dark category">All</button>
-          <button className="btn-dark category">Men's Clothing</button>
-          <button className="btn-dark category">Women's Closing</button>
-          <button className="btn-dark category">Jewelery</button>
-          <button className="btn-dark category">Electronics</button>
+          <button
+            className="btn-dark category"
+            onClick={() => setFilterItems(items)}
+          >
+            All
+          </button>
+          <button
+            className="btn-dark category"
+            onClick={() => filterProduct("men's clothes")}
+          >
+            Men's Clothing
+          </button>
+          <button
+            className="btn-dark category"
+            onClick={() => filterProduct("women's clothes")}
+          >
+            Women's Closing
+          </button>
+          <button
+            className="btn-dark category"
+            onClick={() => filterProduct("jewelery")}
+          >
+            Jewelery
+          </button>
+          <button
+            className="btn-dark category"
+            onClick={() => filterProduct("electronics")}
+          >
+            Electronics
+          </button>
         </div>
       </header>
       <div className="display-grid">
