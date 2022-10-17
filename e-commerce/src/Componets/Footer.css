@@ -12,9 +12,12 @@ footer {
   margin-top: 30px;
   align-items: center;
   padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .icon {
-  margin: 0 5px;
-  font-size: 20px;
+  margin: 0 8px;
+  font-size: 1.7rem;
+  cursor: pointer;
 }

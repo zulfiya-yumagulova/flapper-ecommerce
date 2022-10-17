@@ -30,8 +30,8 @@ function ItemsComponent() {
 
   return (
     <>
-      <header>
-        <div className="overlay">
+      <main>
+        <div>
           <h2>Welcome To E-Commerce Shop</h2>
         </div>
         <div className="search">
@@ -76,7 +76,7 @@ function ItemsComponent() {
             Electronics
           </button>
         </div>
-      </header>
+      </main>
       <div className="display-grid">
         {Array.from(items)
           .filter((item) => !filterItems || item.category === filterItems)

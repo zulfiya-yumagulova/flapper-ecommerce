@@ -61,14 +61,16 @@ img {
   font-size: 18px;
 }
 
-.btn-link {
+/* style doesn't apply */
+.btn-buy a .btn-link {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--btn-light-color);
 }
 
 .btn-buy:hover {
   background-color: var(--secondary-dark-color);
   transition: 0.7;
+  color: var(--primary-color);
 }
 
 /* Style Search Bar */
