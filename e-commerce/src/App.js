@@ -1,15 +1,18 @@
+import { Routes, Router, Route } from "react-router-dom";
 import ItemsComponent from "./Componets/ItemsComponent";
 import Footer from "./Componets/Footer";
+import Home from "./Componets/Home";
+import Navbar from "./Componets/Navbar";
 import "./App.css";
-import NavbarComponent from "./Componets/NavbarComponent";
+import { Container } from "react-bootstrap";
 
 function App() {
   return (
-    <div className="App" id="home">
-      {/* <NavbarComponent /> */}
+    <>
+      <Navbar />
       <ItemsComponent />
       <Footer />
-    </div>
+    </>
   );
 }
 
