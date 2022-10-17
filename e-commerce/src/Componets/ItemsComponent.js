@@ -4,7 +4,7 @@ import "./ItemComponent.css";
 function ItemsComponent() {
   const [items, setItems] = useState([]);
   const [search, setSearch] = useState("");
-  const [filterItems, setFilterItems] = useState(items);
+  const [filterItems, setFilterItems] = useState("");
 
   // Fetching Data
   useEffect(() => {
@@ -25,10 +25,8 @@ function ItemsComponent() {
     e.preventDefault();
   };
 
-  const filterProduct = (cat) => {
-    const updatedList = items.filter((item) => item.category === cat);
-    setFilterItems(updatedList);
-  };
+  // Function to filter products by category
+  const filterProduct = (category) => setFilterItems(category);
 
   return (
     <>
@@ -49,19 +47,19 @@ function ItemsComponent() {
         <div className="categories">
           <button
             className="btn-dark category"
-            onClick={() => setFilterItems(items)}
+            onClick={() => filterProduct("")}
           >
             All
           </button>
           <button
             className="btn-dark category"
-            onClick={() => filterProduct("men's clothes")}
+            onClick={() => filterProduct("men's clothing")}
           >
             Men's Clothing
           </button>
           <button
             className="btn-dark category"
-            onClick={() => filterProduct("women's clothes")}
+            onClick={() => filterProduct("women's clothing")}
           >
             Women's Closing
           </button>
@@ -69,7 +67,7 @@ function ItemsComponent() {
             className="btn-dark category"
             onClick={() => filterProduct("jewelery")}
           >
-            Jewelery
+            Jewelry
           </button>
           <button
             className="btn-dark category"
@@ -81,15 +79,12 @@ function ItemsComponent() {
       </header>
       <div className="display-grid">
         {Array.from(items)
-          .filter((value) => {
-            if (search === "") {
-              return value;
-            } else if (
+          .filter((item) => !filterItems || item.category === filterItems)
+          .filter(
+            (value) =>
+              !search ||
               value.title.toLowerCase().includes(search.toLowerCase())
-            ) {
-              return value;
-            }
-          })
+          )
           .map((item) => (
             <div key={item.id}>
               <div className="card">
