@@ -22,7 +22,13 @@ function Footer() {
       </div>
       <div className="help">
         <p>How Can We Help?</p>
-        <p>Size Guide</p>
+        <a
+          href="https://www.laughinghens.com/clothing-size-conversion-chart"
+          target="_blank"
+          style={{ textDecoration: "none", color: "#ffff" }}
+        >
+          Size Guide
+        </a>
         <p>Size Map</p>
         <p>Help</p>
       </div>

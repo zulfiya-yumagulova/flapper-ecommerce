@@ -22,6 +22,21 @@ body {
   height: 100vh;
 }
 
+.container {
+  max-width: 768px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 15px;
+  padding: 40px 50px;
+  margin: 20px 0;
+  position: relative;
+}
+
 .btn-light {
   background-color: var(--btn-light-color);
   border-radius: 8px;
@@ -61,4 +76,8 @@ body {
   justify-content: flex-end;
   margin: 30px;
   color: var(--color-font);
+}
+
+a {
+  text-decoration: none;
 }

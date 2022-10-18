@@ -26,9 +26,6 @@ function ItemsComponent() {
     e.preventDefault();
   };
 
-  // Function to filter products by category
-  const filterProduct = (category) => setFilterItems(category);
-
   return (
     <>
       <main>
@@ -48,31 +45,31 @@ function ItemsComponent() {
         <div className="categories">
           <button
             className="btn-dark category"
-            onClick={() => filterProduct("")}
+            onClick={() => setFilterItems("")}
           >
             All
           </button>
           <button
             className="btn-dark category"
-            onClick={() => filterProduct("men's clothing")}
+            onClick={() => setFilterItems("men's clothing")}
           >
             Men's Clothing
           </button>
           <button
             className="btn-dark category"
-            onClick={() => filterProduct("women's clothing")}
+            onClick={() => setFilterItems("women's clothing")}
           >
             Women's Closing
           </button>
           <button
             className="btn-dark category"
-            onClick={() => filterProduct("jewelery")}
+            onClick={() => setFilterItems("jewelery")}
           >
             Jewelry
           </button>
           <button
             className="btn-dark category"
-            onClick={() => filterProduct("electronics")}
+            onClick={() => setFilterItems("electronics")}
           >
             Electronics
           </button>
@@ -94,7 +91,7 @@ function ItemsComponent() {
                 {/* <p className="description">{item.description}</p> */}
                 <p className="price">£ {item.price}</p>
                 <button className="btn-dark btn-buy">
-                  <Link to="" className="btn-link">
+                  <Link to={`/${item.id}`} className="btn-link">
                     Buy Now
                   </Link>
                 </button>

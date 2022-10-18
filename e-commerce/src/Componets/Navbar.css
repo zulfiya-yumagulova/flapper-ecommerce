@@ -31,7 +31,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  transform: translate(45%, 45%);
+  transform: translate(-65%, 55%);
   border-radius: 50%;
   background-color: red;
   display: flex;
@@ -40,7 +40,7 @@
 }
 
 /* basket */
-.basket {
+#basket {
   background-color: #fff;
   width: 2rem;
   height: 2rem;
