@@ -21,3 +21,18 @@ footer {
   font-size: 1.7rem;
   cursor: pointer;
 }
+
+/* Mobile and Tablet size */
+@media (max-width: 500px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icons-contact,
+  .follow-icons,
+  .help {
+    align-items: center;
+    margin-left: 60px;
+  }
+}
