@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ItemsComponent from "./Componets/ItemsComponent";
-import Footer from "./Componets/Footer";
-import Home from "./Componets/Home";
 import Navbar from "./Componets/Navbar";
+import Home from "./Componets/Home";
+import About from "./Componets/About";
+import AboutLink from "./Componets/AboutLink";
+import Footer from "./Componets/Footer";
 import "./App.css";
-import { Container } from "react-bootstrap";
 
 function App() {
   return (
@@ -12,9 +13,20 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/products" element={<ItemsComponent />} />
+          <Route
+            exact
+            path="/"
+            element={
+              <>
+                <Home />
+                <ItemsComponent />
+              </>
+            }
+          />
+
+          <Route exact path="/about" element={<About />} />
         </Routes>
+        <AboutLink />
         <Footer />
       </Router>
     </>

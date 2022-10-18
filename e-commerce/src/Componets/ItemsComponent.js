@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./ItemComponent.css";
 
 function ItemsComponent() {
@@ -93,9 +94,9 @@ function ItemsComponent() {
                 {/* <p className="description">{item.description}</p> */}
                 <p className="price">£ {item.price}</p>
                 <button className="btn-dark btn-buy">
-                  <a href="#" className="btn-link">
+                  <Link to="" className="btn-link">
                     Buy Now
-                  </a>
+                  </Link>
                 </button>
               </div>
             </div>
