@@ -29,9 +29,6 @@ function ItemsComponent() {
   return (
     <>
       <main>
-        <div>
-          <h2>Welcome To E-Commerce Shop</h2>
-        </div>
         <div className="search">
           <form onSubmit={handleSubmit}>
             <input

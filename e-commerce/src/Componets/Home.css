@@ -6,12 +6,21 @@ header {
   background-repeat: no-repeat;
 }
 
-.showcase {
-  height: 400px;
-  margin-bottom: 2rem;
-}
 .overlay {
   height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 1.6px;
+}
+
+.showcase .overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
