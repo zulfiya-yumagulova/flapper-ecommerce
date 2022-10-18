@@ -75,7 +75,7 @@ function ItemsComponent() {
           </button>
         </div>
       </main>
-      <div className="display-grid">
+      <div className="grid-container">
         {Array.from(items)
           .filter((item) => !filterItems || item.category === filterItems)
           .filter(
@@ -84,11 +84,10 @@ function ItemsComponent() {
               value.title.toLowerCase().includes(search.toLowerCase())
           )
           .map((item) => (
-            <div key={item.id}>
+            <div key={item.id} className="item-container">
               <div className="card">
                 <p className="title">{item.title}</p>
                 <img src={item.image} />
-                {/* <p className="description">{item.description}</p> */}
                 <p className="price">£ {item.price}</p>
                 <button className="btn-dark btn-buy">
                   <Link to={`/${item.id}`} className="btn-link">

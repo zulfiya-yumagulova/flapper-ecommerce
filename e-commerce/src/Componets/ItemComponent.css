@@ -21,13 +21,16 @@ h2 {
 }
 
 /* Creating Item Card */
-.display-grid {
+.grid-container {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-row: 1rem;
   gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   margin: 0 auto;
+}
+
+.item-container {
 }
 
 .card {
@@ -45,10 +48,8 @@ h2 {
 img {
   display: block;
   width: 100%;
-  max-width: 150px;
-  /* height: 350px; */
-  margin: 20px 0;
-  overflow: hidden;
+  max-width: 100px;
+  height: auto;
   margin: 0 auto;
 }
 

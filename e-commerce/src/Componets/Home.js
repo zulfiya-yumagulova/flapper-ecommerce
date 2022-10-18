@@ -1,11 +1,22 @@
 import React from "react";
-import background from "../images/fashion.jpg";
+import BackgroundImage from "../images/fashion.jpg";
 
 function Home() {
   return (
-    <header>
-      <div className="overlay">Hello!</div>
-    </header>
+    <div
+      className="showcase"
+      style={{
+        backgroundImage: `url(${BackgroundImage})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        height: "450px",
+      }}
+    >
+      <div className="overlay">
+        <h2>e-Shop</h2>
+      </div>
+    </div>
   );
 }
 
