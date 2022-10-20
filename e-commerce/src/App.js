@@ -21,10 +21,11 @@ function App() {
             element={
               <>
                 <Home />
-                <ItemsComponent />
               </>
             }
           />
+
+          <Route exact path="/products" element={<ItemsComponent />} />
           <Route exact path="/:id" element={<Item />} />
           <Route exact path="/about" element={<About />} />
         </Routes>

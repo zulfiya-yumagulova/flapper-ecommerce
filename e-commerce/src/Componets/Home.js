@@ -5,6 +5,7 @@ import "./Home.css";
 function Home() {
   return (
     <div
+      id="home"
       className="showcase"
       style={{
         backgroundImage: `url(${BackgroundImage})`,

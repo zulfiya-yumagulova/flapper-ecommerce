@@ -12,8 +12,12 @@ function Navbar() {
       <span className="logo">Logo</span>
       <div className="navbar-items">
         <Link to="/">Home</Link>
-        <Link to="/contact">Contact</Link>
-
+        <a href="#contact">Contact</a>
+        <Link to="/products">All Clothing</Link>
+        <Link to="/signup">Sing Up</Link>
+        <Link to="/user">
+          <AiOutlineUser />
+        </Link>
         <Link to="/cart">
           <BsFillCartFill id="basket" />
           <div className="num-items "> 3</div>

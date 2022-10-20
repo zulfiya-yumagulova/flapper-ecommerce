@@ -9,7 +9,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="icons-contact">
+      <div id="contact" className="icons-contact">
         <p>Contact Us</p>
         <BsEnvelope className="icon" />
         <AiOutlinePhone className="icon" />
