@@ -20,6 +20,7 @@ export const addToCart = (item) => {
 
 // Delete Item From Cart
 export const deleteFromCart = (item) => {
+  console.log("item from action", item);
   return {
     type: DELETE_ITEM_FROM_CART,
     payload: item,
