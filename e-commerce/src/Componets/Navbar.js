@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import cartReducer from "../redux/reducers/cartReducer";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs";
 import "./Navbar.css";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const state = useSelector((state) => state.cartReducer);
+  console.log("from navbar", state);
 
   return (
     <div className="navbar">
@@ -20,7 +25,7 @@ function Navbar() {
         </Link>
         <Link to="/cart">
           <BsFillCartFill id="basket" />
-          <div className="num-items "> 3</div>
+          <div className="num-items "> {state.length}</div>
         </Link>
       </div>
       <div className="navbar-toggle" onClick={() => setIsOpen(isOpen)}>

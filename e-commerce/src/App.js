@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Provider } from "react-redux";
 import ItemsComponent from "./Componets/ItemsComponent";
 import Navbar from "./Componets/Navbar";
 import Home from "./Componets/Home";
@@ -7,11 +8,12 @@ import About from "./Componets/About";
 import AboutLink from "./Componets/AboutLink";
 import Contact from "./Componets/Contact";
 import Footer from "./Componets/Footer";
+import store from "./redux/store.js";
 import "./App.css";
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <Router>
         <Navbar />
         <Routes>
@@ -32,7 +34,7 @@ function App() {
         <AboutLink />
         <Footer />
       </Router>
-    </>
+    </Provider>
   );
 }
 
