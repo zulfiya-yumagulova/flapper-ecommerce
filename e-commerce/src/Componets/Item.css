@@ -1,0 +1,51 @@
+.flex-container {
+  flex-direction: column;
+}
+
+.flex-container .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-container .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.flex-container .column-left .column-right {
+  height: 100%;
+}
+
+.column-left {
+  margin: 2rem;
+}
+
+.column-left img {
+  margin-top: 3rem;
+}
+
+.column-right {
+  margin: 2rem;
+}
+
+#btn-add {
+  margin: 2rem 1rem;
+}
+
+#btn-delete {
+  margin: 2rem 1rem;
+}
+
+.description {
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.rating {
+  margin: 0 1rem;
+  font-weight: 500;
+}

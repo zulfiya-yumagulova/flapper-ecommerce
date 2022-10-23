@@ -1,15 +1,17 @@
 // For adding item to the Cart
-export const addCart = (product) => {
+export const addCart = (item) => {
   return {
     type: "ADDITEM",
-    payload: product,
+    payload: item,
   };
+  console.log(item, "from action product");
 };
 
 // For deleting item from the Cart
-export const delCart = (product) => {
+export const delCart = (item) => {
   return {
     type: "DELITEM",
-    payload: product,
+    payload: item,
   };
+  console.log(item, "from action product");
 };

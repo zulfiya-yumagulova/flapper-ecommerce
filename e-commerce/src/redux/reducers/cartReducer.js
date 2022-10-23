@@ -1,19 +1,17 @@
 const cart = [];
-
-// const initialState = {
-//   cartNumbers: 0,
-// };
+const initialState = {};
 
 const cartReducer = (state = cart, action) => {
   const product = action.payload;
-  console.log("action", action.payload);
+  console.log("action", product);
   switch (action.type) {
     case "ADDITEM":
       console.log("this is my cartReduser");
       // Checking if item is already exists in the cart
       // Creating a variable with existing item
-      const existing = state.find((item) => item.id === product.id);
+      const existing = state.find((x) => x.id === product.id);
       console.log("exist", existing, "state", state);
+      console.log("action");
       if (existing) {
         // Increase the quantity if item exists in the cart than add 1 to the quantity, if no add item to the cart
         return state.map((item) =>
