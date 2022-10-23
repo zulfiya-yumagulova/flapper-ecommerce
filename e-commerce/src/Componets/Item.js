@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/action";
+import { addCart } from "../redux/action";
 import { AiFillStar } from "react-icons/ai";
 
 function Item() {
@@ -14,7 +14,7 @@ function Item() {
   const dispatch = useDispatch();
   const addItem = (item) => {
     console.log("this is my item", item);
-    dispatch(addToCart(item.id, item.image, item.description));
+    dispatch(addCart(item.id, item.image, item.description));
   };
 
   //   Fetching Data
@@ -39,7 +39,7 @@ function Item() {
         <AiFillStar />
       </p>
       <p>{item.price}</p>
-      <button className="btn-dark" onClick={() => dispatch(addToCart(item))}>
+      <button className="btn-dark" onClick={() => dispatch(addCart(item))}>
         Add{" "}
       </button>
       <button className="btn-dark">Delete</button>

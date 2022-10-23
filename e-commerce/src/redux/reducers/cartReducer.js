@@ -1,9 +1,3 @@
-import {
-  ADD_ITEM_TO_CART,
-  DECREASE_QUANTITY,
-  DELETE_ITEM_FROM_CART,
-} from "../action-types/index.js";
-
 const cart = [];
 
 // const initialState = {
@@ -14,7 +8,7 @@ const cartReducer = (state = cart, action) => {
   const product = action.payload;
   console.log("action", action.payload);
   switch (action.type) {
-    case ADD_ITEM_TO_CART:
+    case "ADDITEM":
       console.log("this is my cartReduser");
       // Checking if item is already exists in the cart
       // Creating a variable with existing item
@@ -37,7 +31,7 @@ const cartReducer = (state = cart, action) => {
       }
       break;
 
-    case DELETE_ITEM_FROM_CART:
+    case "DELITEM":
       const exist = state.find((item) => item.id === product.id);
       console.log("existing from delete case", existing);
       if (existing.qty === 1) {
