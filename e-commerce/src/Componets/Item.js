@@ -54,15 +54,15 @@ function Item() {
                 <AiFillStar />
               </p>
               <p className="price">£{item.price}</p>
-              <button className="btn-dark" id="btn-add">
+              <button
+                className="btn-dark"
+                id="btn-add"
+                onClick={() => addItem(item)}
+              >
                 Add
               </button>
               <Link to="/basket">
-                <button
-                  className="btn-dark"
-                  id="btn-delete"
-                  onClick={() => addItem}
-                >
+                <button className="btn-dark" id="btn-delete">
                   Go To Basket
                 </button>
               </Link>
