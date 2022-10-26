@@ -27,7 +27,7 @@ h2 {
   grid-row: 1rem;
   gap: 2rem;
   justify-content: center;
-  margin: 0 auto;
+  margin: 15rem auto;
 }
 
 .item-container {
@@ -112,16 +112,28 @@ input:focus {
 
 /* =======Media Queries (Tablets)========= */
 @media screen and (max-width: 1024px) {
-  .display-grid {
+  .grid-container {
     grid-template-columns: 1fr 1fr;
     gap: 1.2rem;
+  }
+
+  input {
+    width: 450px;
+  }
+
+  .btn-search {
+    margin-left: 10px;
   }
 }
 
 /* ==========Media Queries (Mobies) */
 @media screen and (max-width: 600px) {
-  .display-grid {
+  .grid-container {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  input {
+    width: 300px;
   }
 }

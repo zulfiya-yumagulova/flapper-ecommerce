@@ -85,7 +85,7 @@ function ItemsComponent() {
               <div className="card">
                 <p className="title">{item.title}</p>
 
-                <img src={item.image} />
+                <img src={item.image} alt={item.title} />
 
                 <p className="price">£ {item.price}</p>
                 <button className="btn-dark btn-buy">
