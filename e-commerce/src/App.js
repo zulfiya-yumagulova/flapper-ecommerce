@@ -7,8 +7,10 @@ import Item from "./Componets/Item";
 import About from "./Componets/About";
 import AboutLink from "./Componets/AboutLink";
 import Contact from "./Componets/Contact";
+import Basket from "./Componets/Basket";
 import Footer from "./Componets/Footer";
-import store from "./redux/store.js";
+import store from "./redux/store";
+
 import "./App.css";
 
 function App() {
@@ -29,7 +31,9 @@ function App() {
 
           <Route exact path="/products" element={<ItemsComponent />} />
           <Route exact path="/:id" element={<Item />} />
+          {/* <Route exact path="/cart" element={<Cart />} /> */}
           <Route exact path="/about" element={<About />} />
+          <Route exact path="/basket" element={<Basket />} />
         </Routes>
         <AboutLink />
         <Footer />
