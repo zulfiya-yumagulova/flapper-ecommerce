@@ -4,7 +4,7 @@ import { AiOutlinePhone } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { FiTwitter } from "react-icons/fi";
-import "./Footer.css";
+import "./styles/Footer.css";
 
 function Footer() {
   return (

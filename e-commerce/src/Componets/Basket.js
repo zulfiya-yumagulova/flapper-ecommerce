@@ -16,6 +16,9 @@ function Basket() {
     dispatch(deleteFromBasket(item));
   };
 
+  function getPriceForItem(item) {
+    return item.qty * item.price;
+  }
   const emptyBasket = () => {
     return (
       <div className="px-4 my-5 bg-light rounded-3 py-5">
@@ -35,7 +38,7 @@ function Basket() {
             <div className="row justify-content-center">
               <div className="col-md-4">
                 <img
-                  src={product.filename}
+                  src={product.image}
                   alt={product.title}
                   height="200px"
                   width="180px"
@@ -47,17 +50,11 @@ function Basket() {
                   {product.qty} X ${product.price} = $
                   {product.qty * product.price}
                 </p>
-                <button
-                  className="btn btn-outline-dark me-4"
-                  onClick={() => handleDel(product)}
-                >
-                  <i className="fa fa-minus"></i>
+                <button className="btn-dark" onClick={() => handleDel(product)}>
+                  <AiOutlineMinusCircle className="icon" />
                 </button>
-                <button
-                  className="btn btn-outline-dark"
-                  onClick={() => handleAdd(product)}
-                >
-                  <i className="fa fa-plus"></i>
+                <button className="btn-dark" onClick={() => handleAdd(product)}>
+                  <AiOutlinePlusCircle className="icon" />
                 </button>
               </div>
             </div>

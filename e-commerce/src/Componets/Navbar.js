@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs";
-import "./Navbar.css";
+import "./styles/Navbar.css";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +21,7 @@ function Navbar() {
         <Link to="/user">
           <AiOutlineUser />
         </Link>
+
         <Link to="/basket">
           <BsFillCartFill id="basket" />
           <div className="num-items ">{state.length} </div>

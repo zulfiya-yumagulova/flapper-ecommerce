@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../redux/actions/actions";
 import { AiFillStar } from "react-icons/ai";
-import "./Item.css";
+import "./styles/Item.css";
 
 function Item() {
   // Using a hook to create an id

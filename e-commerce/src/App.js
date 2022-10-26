@@ -12,6 +12,7 @@ import Footer from "./Componets/Footer";
 import store from "./redux/store";
 
 import "./App.css";
+import SignUpForm from "./Componets/SignUpForm";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           {/* <Route exact path="/cart" element={<Cart />} /> */}
           <Route exact path="/about" element={<About />} />
           <Route exact path="/basket" element={<Basket />} />
+          <Route exact path="/signup" element={<SignUpForm />} />
         </Routes>
         <AboutLink />
         <Footer />

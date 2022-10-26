@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./ItemComponent.css";
+import "./styles/ItemComponent.css";
 
 function ItemsComponent() {
   const [items, setItems] = useState([]);
@@ -84,7 +84,9 @@ function ItemsComponent() {
             <div key={item.id} className="item-container">
               <div className="card">
                 <p className="title">{item.title}</p>
+
                 <img src={item.image} />
+
                 <p className="price">£ {item.price}</p>
                 <button className="btn-dark btn-buy">
                   <Link to={`/${item.id}`} className="btn-link">
