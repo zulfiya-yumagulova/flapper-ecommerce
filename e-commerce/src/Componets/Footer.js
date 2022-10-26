@@ -25,12 +25,11 @@ function Footer() {
         <a
           href="https://www.laughinghens.com/clothing-size-conversion-chart"
           target="_blank"
-          style={{ textDecoration: "none", color: "#ffff" }}
+          className="size-link"
         >
           Size Guide
         </a>
-        <p>Size Map</p>
-        <p>Help</p>
+        <p id="help">Help</p>
       </div>
     </footer>
   );
