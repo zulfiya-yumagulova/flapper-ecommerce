@@ -27,14 +27,14 @@ const basketReducer = (state = basket, action) => {
       break;
 
     case ActionTypes.DELETE_FROM_BASKET:
-      const exist1 = state.map((item) => item.id === product.id);
-      if (exist1.qty === 1) {
-        return state.filter((item) => item.id !== exist1.id);
-      } else {
-        return state.map((item) =>
-          item.id === product.id ? { ...item, qty: item.qty - 1 } : item
-        );
-      }
+      const unchangedItems = state.filter((item) => item.id !== product.id);
+      const itemsToUpdate = state.filter((item) => item.id === product.id);
+      const updatedItems = itemsToUpdate.map((item) => ({
+        ...item,
+        qty: item.qty - 1,
+      }));
+      const removeZeroQty = updatedItems.filter((item) => item.qty > 0);
+      return [...unchangedItems, ...removeZeroQty];
       break;
     default:
       return state;
