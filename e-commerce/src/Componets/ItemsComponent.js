@@ -31,12 +31,14 @@ function ItemsComponent() {
       <main>
         <div className="search">
           <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Search..."
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <button className="btn-light btn-search">Search</button>
+            <div className="search-items">
+              <input
+                type="text"
+                placeholder="Search..."
+                onChange={(e) => setSearch(e.target.value)}
+              />
+              <button className="btn-light btn-search">Search</button>
+            </div>
           </form>
         </div>
         <div className="categories">
@@ -84,9 +86,7 @@ function ItemsComponent() {
             <div key={item.id} className="item-container">
               <div className="card">
                 <p className="title">{item.title}</p>
-
                 <img src={item.image} alt={item.title} />
-
                 <p className="price">£ {item.price}</p>
                 <button className="btn-dark btn-buy">
                   <Link to={`/${item.id}`} className="btn-link">
