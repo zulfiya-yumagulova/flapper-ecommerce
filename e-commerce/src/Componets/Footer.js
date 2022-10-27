@@ -10,18 +10,18 @@ function Footer() {
   return (
     <footer className="footer">
       <div id="contact" className="icons-contact">
-        <p>Contact Us</p>
+        <h4 className="footer-header">Contact Us</h4>
         <BsEnvelope className="icon" />
         <AiOutlinePhone className="icon" />
       </div>
       <div className="follow-icons">
-        <p>Stay Connected</p>
+        <h4 className="footer-header">Stay Connected</h4>
         <BsInstagram className="icon" />
         <AiOutlineFacebook className="icon" />
         <FiTwitter className="icon" />
       </div>
       <div className="help">
-        <p>How Can We Help?</p>
+        <h4 className="footer-header">How Can We Help?</h4>
         <a
           href="https://www.laughinghens.com/clothing-size-conversion-chart"
           target="_blank"
@@ -29,7 +29,9 @@ function Footer() {
         >
           Size Guide
         </a>
-        <p id="help">Help</p>
+        <h4 className="footer-header" id="help">
+          Help
+        </h4>
       </div>
     </footer>
   );

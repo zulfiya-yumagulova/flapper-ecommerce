@@ -8,7 +8,7 @@ import { addToBasket, deleteFromBasket } from "../redux/actions/actions";
 function Basket() {
   const state = useSelector((state) => state.basketReducer);
   const dispatch = useDispatch();
-
+  console.log("state: ", state);
   const handleAdd = (item) => {
     dispatch(addToBasket(item));
   };
@@ -16,9 +16,9 @@ function Basket() {
     dispatch(deleteFromBasket(item));
   };
 
-  function getPriceForItem(item) {
-    return item.qty * item.price;
-  }
+  // function getPriceForItem(item) {
+  //   return item.qty * item.price;
+  // }
   const emptyBasket = () => {
     return (
       <div className="px-4 my-5 bg-light rounded-3 py-5">
@@ -33,7 +33,7 @@ function Basket() {
   const basketItems = (product) => {
     return (
       <>
-        <div className="px-4 my-5 bg-light rounded-3 py-5">
+        <div className="px-4 my-5 bg-light rounded-3 py-5" key={product.id}>
           <div className="container py-4">
             <div className="row justify-content-center">
               <div className="col-md-4">

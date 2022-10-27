@@ -16,8 +16,9 @@ footer {
   font-weight: 500;
 }
 
-p {
+h4 {
   margin-bottom: 30px;
+  letter-spacing: 2px;
 }
 
 #help {
