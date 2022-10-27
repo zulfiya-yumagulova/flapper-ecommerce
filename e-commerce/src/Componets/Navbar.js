@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs";
@@ -14,18 +14,18 @@ function Navbar() {
     <div className="navbar">
       <span className="logo">Logo</span>
       <div className="navbar-items">
-        <Link to="/">Home</Link>
+        <NavLink to="/">Home</NavLink>
         <a href="#contact">Contact</a>
-        <Link to="/products">All Clothing</Link>
-        <Link to="/signup">Sing Up</Link>
-        <Link to="/user">
+        <NavLink to="/products">All Clothing</NavLink>
+        <NavLink to="/signup">Sing Up</NavLink>
+        <NavLink to="/user">
           <AiOutlineUser />
-        </Link>
+        </NavLink>
 
-        <Link to="/basket">
+        <NavLink to="/basket">
           <BsFillCartFill id="basket" />
           <div className="num-items ">{state.length} </div>
-        </Link>
+        </NavLink>
       </div>
       <div className="navbar-toggle" onClick={() => setIsOpen(isOpen)}>
         <div className="bar"></div>

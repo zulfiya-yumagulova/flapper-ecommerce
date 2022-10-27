@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../redux/actions/actions";
 import { AiFillStar } from "react-icons/ai";
-import "./styles/Item.css";
+// import "./styles/Item.css";
 
 function Item() {
   // Using a hook to create an id
@@ -48,12 +48,17 @@ function Item() {
           </div>
           <div className="column">
             <div className="column-right">
-              <p className="description">{item.description}</p>
-              <p className="rating">
+              {/* I used a div instead of <p></p> tag because I have no idia why and how it happend
+               but if I use <p></p> tag all fetched data is disappered and 
+               the only one way I could fix that bug to change tags
+              
+              */}
+              <div className="description">{item.description}</div>
+              <h4 className="rating">
                 Rating {item.rating && item.rating.rate}
                 <AiFillStar />
-              </p>
-              <p className="price">£{item.price}</p>
+              </h4>
+              <h4 className="price">£{item.price}</h4>
               <button
                 className="btn-dark"
                 id="btn-add"

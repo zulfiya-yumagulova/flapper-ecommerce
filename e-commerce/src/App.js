@@ -5,11 +5,10 @@ import Navbar from "./Componets/Navbar";
 import Home from "./Componets/Home";
 import Item from "./Componets/Item";
 import Basket from "./Componets/Basket";
+import SignUpForm from "./Componets/SignUpForm";
 import Footer from "./Componets/Footer";
 import store from "./redux/store";
-
-import "./App.css";
-import SignUpForm from "./Componets/SignUpForm";
+// import "./App.css";
 
 function App() {
   return (
