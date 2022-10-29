@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { AiOutlineMinusCircle } from "react-icons/ai";
 import { addToBasket, deleteFromBasket } from "../redux/actions/actions";
+import { getPriceForItem } from "./getPriceForItem";
 
 function Basket() {
   const state = useSelector((state) => state.basketReducer);
@@ -16,27 +17,29 @@ function Basket() {
     dispatch(deleteFromBasket(item));
   };
 
-  function getPriceForItem(item) {
-    return item.qty * item.price;
-  }
+  // Function ti get total price
+  // const getPriceForItem = (qty, price) => {
+  //   console.log("get price", qty * price);
+  //   return qty * price;
+  // };
+
+  // Function to display if the basket is empty
   const emptyBasket = () => {
     return (
-      <div className="px-4 my-5 bg-light rounded-3 py-5">
-        <div className="container py-4">
-          <div className="row">
-            <h3>Your Cart is Empty</h3>
-          </div>
-        </div>
+      <div className="emty-basket" data-testid="empty-basket">
+        <h3>Your Basket Is Empty</h3>
       </div>
     );
   };
+
+  // Function to display items added to the basket
   const basketItems = (product) => {
     return (
       <>
-        <div className="px-4 my-5 bg-light rounded-3 py-5" key={product.id}>
-          <div className="container py-4">
-            <div className="row justify-content-center">
-              <div className="col-md-4">
+        <div className="" key={product.id}>
+          <div className="container">
+            <div className="row ">
+              <div className="">
                 <img
                   src={product.image}
                   alt={product.title}
@@ -44,19 +47,26 @@ function Basket() {
                   width="180px"
                 />
               </div>
-              <div className="col-md-4">
+              <div className="price">
                 <h3>{product.title}</h3>
-                <h4>Qty: {product.qty}</h4>
-                <h4 className="lead fw-bold">
+                <h4 data-testid="item-qty">Qty: {product.qty}</h4>
+                <h4 className="total">
                   Total Price
-                  {product.qty * product.price}
+                  <span className="total-price">
+                    {getPriceForItem(product.qty, product.price)}
+                  </span>
                 </h4>
 
                 <button className="btn-dark" onClick={() => handleDel(product)}>
                   <AiOutlineMinusCircle className="icon" />
                 </button>
-                <button className="btn-dark" onClick={() => handleAdd(product)}>
-                  <AiOutlinePlusCircle className="icon" />
+                <button
+                  className="btn-dark"
+                  data-testid="btn-add"
+                  onClick={() => handleAdd(product)}
+                >
+                  {/* <AiOutlinePlusCircle className="icon" /> */}
+                  Add
                 </button>
               </div>
             </div>
@@ -70,10 +80,7 @@ function Basket() {
       <>
         <div className="container">
           <div className="row">
-            <Link
-              to="/checkout"
-              className="btn btn-outline-dark mb-5 w-25 mx-auto"
-            >
+            <Link to="/checkout" className="btn btn-dark ">
               Proceed to Checkout
             </Link>
           </div>
