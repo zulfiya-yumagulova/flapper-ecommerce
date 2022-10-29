@@ -1,0 +1,49 @@
+.products li {
+  padding: 1rem 0;
+  margin: 2rem 0;
+  list-style-type: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.row {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+}
+
+.col.left {
+  width: 70%;
+}
+
+.total-price {
+  margin-left: 1rem;
+}
+
+.col.right {
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 30%);
+}
+
+.details .title {
+  font-size: 1rem;
+}
+
+.details .price {
+  font-size: 1.5rem;
+}
+
+.add {
+  margin: 1rem;
+}
+
+.remove {
+  margin: 1rem;
+}

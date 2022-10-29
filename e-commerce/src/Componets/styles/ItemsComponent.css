@@ -55,7 +55,7 @@ img {
   margin: 0 auto;
 }
 
-.price {
+.item-price {
   text-align: center;
   margin: 10px 0;
   font-weight: 700;
@@ -118,14 +118,17 @@ input:focus {
   .grid-container {
     grid-template-columns: 1fr 1fr;
     gap: 1.2rem;
+    margin-top: 450px;
   }
 
   input {
     width: 400px;
+    margin-left: -70px;
+    margin-right: 0;
   }
 
   .btn-search {
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
 }
 
@@ -134,6 +137,8 @@ input:focus {
   .grid-container {
     grid-template-columns: 1fr;
     gap: 1rem;
+    margin-left: 50px;
+    margin-top: 350px;
   }
 
   input {

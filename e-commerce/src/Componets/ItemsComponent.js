@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./styles/ItemComponent.css";
+import "./styles/ItemsComponent.css";
 
 function ItemsComponent() {
   const [items, setItems] = useState([]);
@@ -37,6 +37,7 @@ function ItemsComponent() {
                 placeholder="Search..."
                 onChange={(e) => setSearch(e.target.value)}
               />
+
               <button className="btn-light btn-search">Search</button>
             </div>
           </form>
@@ -87,7 +88,7 @@ function ItemsComponent() {
               <div className="card">
                 <h3 className="title">{item.title}</h3>
                 <img src={item.image} alt={item.title} />
-                <h5 className="price">£ {item.price}</h5>
+                <h5 className="item-price">£ {item.price}</h5>
                 <button className="btn-dark btn-buy">
                   <Link to={`/${item.id}`} className="btn-link">
                     Buy Now

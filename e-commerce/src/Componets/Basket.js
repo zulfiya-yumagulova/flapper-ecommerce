@@ -5,6 +5,7 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 import { AiOutlineMinusCircle } from "react-icons/ai";
 import { addToBasket, deleteFromBasket } from "../redux/actions/actions";
 import { getPriceForItem } from "./getPriceForItem";
+import "./styles/Basket.css";
 
 function Basket() {
   const state = useSelector((state) => state.basketReducer);
@@ -35,11 +36,11 @@ function Basket() {
   // Function to display items added to the basket
   const basketItems = (product) => {
     return (
-      <>
-        <div className="" key={product.id}>
-          <div className="container">
-            <div className="row ">
-              <div className="">
+      <section className="container">
+        <ul className="products" key={product.id}>
+          <li className="row ">
+            <div className="col left">
+              <div className="image">
                 <img
                   src={product.image}
                   alt={product.title}
@@ -47,8 +48,12 @@ function Basket() {
                   width="180px"
                 />
               </div>
+              <div className="details">
+                <div className="title">
+                  <h3>{product.title}</h3>
+                </div>
+              </div>
               <div className="price">
-                <h3>{product.title}</h3>
                 <h4 data-testid="item-qty">Qty: {product.qty}</h4>
                 <h4 className="total">
                   Total Price
@@ -56,44 +61,51 @@ function Basket() {
                     {getPriceForItem(product.qty, product.price)}
                   </span>
                 </h4>
-
-                <button className="btn-dark" onClick={() => handleDel(product)}>
-                  <AiOutlineMinusCircle className="icon" />
-                </button>
-                <button
-                  className="btn-dark"
-                  data-testid="btn-add"
-                  onClick={() => handleAdd(product)}
-                >
-                  {/* <AiOutlinePlusCircle className="icon" /> */}
-                  Add
-                </button>
+              </div>
+              <div className="col right">
+                <div className="add">
+                  <button
+                    className="btn-dark"
+                    onClick={() => handleDel(product)}
+                  >
+                    <AiOutlineMinusCircle className="icon" />
+                  </button>
+                </div>
+                <div className="remove">
+                  <button
+                    className="btn-dark"
+                    data-testid="btn-add"
+                    onClick={() => handleAdd(product)}
+                  >
+                    <AiOutlinePlusCircle className="icon" />
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </>
+          </li>
+        </ul>
+      </section>
     );
   };
-  const buttons = () => {
-    return (
-      <>
-        <div className="container">
-          <div className="row">
-            <Link to="/checkout" className="btn btn-dark ">
-              Proceed to Checkout
-            </Link>
-          </div>
-        </div>
-      </>
-    );
-  };
+  // const buttons = () => {
+  //   return (
+  //     <>
+  //       <div className="container">
+  //         <div className="row">
+  //           <Link to="/checkout" className="btn btn-dark ">
+  //             Proceed to Checkout
+  //           </Link>
+  //         </div>
+  //       </div>
+  //     </>
+  //   );
+  // };
 
   return (
     <div>
       {state.length === 0 && emptyBasket()}
       {state.length !== 0 && state.map(basketItems)}
-      {state.length !== 0 && buttons()}
+      {/* {state.length !== 0 && buttons()} */}
     </div>
   );
 }

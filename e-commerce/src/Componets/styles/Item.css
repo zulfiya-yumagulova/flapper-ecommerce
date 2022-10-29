@@ -9,7 +9,7 @@
   width: 100%;
 }
 
-.flex-container .column {
+.flex-container .column-left {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
@@ -25,7 +25,7 @@
 }
 
 .column-left img {
-  margin-top: 3rem;
+  margin-top: -11rem;
 }
 
 .column-right {
@@ -36,16 +36,44 @@
   margin: 2rem 1rem;
 }
 
-#btn-delete {
-  margin: 2rem 1rem;
-}
-
+/* insteat of p tag I used div tag to display description */
 .description {
   line-height: 1.6;
   font-size: 18px;
+  width: 450px;
+  margin: 0 auto;
 }
 
-.rating {
-  margin: 0 1rem;
-  font-weight: 500;
+.info {
+  margin: 5rem auto;
+  font-weight: 600;
+}
+
+.price {
+  margin-top: -5rem;
+}
+
+.btn-home {
+  margin: 2rem;
+}
+
+/* =======Media Queries (Tablets)========= */
+@media screen and (max-width: 600px) {
+  .column-left img {
+    margin-top: -5rem;
+  }
+
+  .description {
+    height: 300px;
+    width: 300px;
+    margin-left: 5rem;
+  }
+
+  .info {
+    margin-left: 5rem;
+  }
+
+  .buttons {
+    margin-left: 4rem;
+  }
 }

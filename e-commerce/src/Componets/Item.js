@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../redux/actions/actions";
 import { AiFillStar } from "react-icons/ai";
-// import "./styles/Item.css";
+import "./styles/Item.css";
 
 function Item() {
   // Using a hook to create an id
@@ -37,7 +37,7 @@ function Item() {
 
   return (
     <>
-      <Link to="/" className="btn-dark">
+      <Link to="/" className="btn-dark btn-home">
         Go Home
       </Link>
       <div className="flex-container">
@@ -54,23 +54,27 @@ function Item() {
               
               */}
               <div className="description">{item.description}</div>
-              <h4 className="rating">
-                Rating {item.rating && item.rating.rate}
-                <AiFillStar />
-              </h4>
-              <h4 className="price">£{item.price}</h4>
-              <button
-                className="btn-dark"
-                id="btn-add"
-                onClick={() => addItem(item)}
-              >
-                Add
-              </button>
-              <Link to="/basket">
-                <button className="btn-dark" id="btn-delete">
-                  Go To Basket
+              <div className="info">
+                <h4>
+                  Rating {item.rating && item.rating.rate}
+                  <AiFillStar />
+                </h4>
+                <h4 className="price">£{item.price}</h4>
+              </div>
+              <div className="buttons">
+                <button
+                  className="btn-dark"
+                  id="btn-add"
+                  onClick={() => addItem(item)}
+                >
+                  Add
                 </button>
-              </Link>
+                <Link to="/basket">
+                  <button className="btn-dark" id="btn-delete">
+                    Go To Basket
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

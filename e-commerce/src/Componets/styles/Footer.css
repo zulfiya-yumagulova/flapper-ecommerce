@@ -46,6 +46,7 @@ h4 {
   footer {
     display: flex;
     flex-direction: column;
+    margin-right: -55px;
   }
 
   .icons-contact,
