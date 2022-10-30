@@ -61,11 +61,10 @@ img {
   font-weight: 700;
 }
 
-.title {
+.card-title {
   text-align: center;
   margin: 30px 15px;
   font-size: 18px;
-  text-overflow: ellipsis;
 }
 
 /* style doesn't apply */

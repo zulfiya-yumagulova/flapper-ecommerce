@@ -43,7 +43,7 @@ function Item() {
       <div className="flex-container">
         <div className="row">
           <div className="column-left">
-            <h1>{item.title}</h1>
+            <h1 className="title">{item.title}</h1>
             <img src={item.image} alt={item.title}></img>
           </div>
           <div className="column">

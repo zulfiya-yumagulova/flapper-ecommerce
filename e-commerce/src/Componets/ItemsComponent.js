@@ -86,7 +86,7 @@ function ItemsComponent() {
           .map((item) => (
             <div key={item.id} className="item-container">
               <div className="card">
-                <h3 className="title">{item.title}</h3>
+                <h3 className="card-title">{item.title}</h3>
                 <img src={item.image} alt={item.title} />
                 <h5 className="item-price">£ {item.price}</h5>
                 <button className="btn-dark btn-buy">
