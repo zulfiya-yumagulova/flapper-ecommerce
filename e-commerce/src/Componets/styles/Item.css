@@ -25,7 +25,7 @@
 }
 
 .column-left img {
-  margin-top: -11rem;
+  margin-top: -19rem;
 }
 
 .column-right {
@@ -44,6 +44,12 @@
   margin: 0 auto;
 }
 
+h1 {
+  color: var(--color-font);
+  align-items: center;
+  margin: 30px;
+}
+
 .info {
   margin: 5rem auto;
   font-weight: 600;
@@ -60,9 +66,12 @@
 /* =======Media Queries (Tablets)========= */
 @media screen and (max-width: 600px) {
   .column-left img {
-    margin-top: -5rem;
+    margin-top: 5rem;
   }
 
+  .column-right {
+    margin: 10px;
+  }
   .description {
     height: 300px;
     width: 300px;
@@ -70,7 +79,7 @@
   }
 
   .info {
-    margin-left: 5rem;
+    margin-left: 1rem;
   }
 
   .buttons {

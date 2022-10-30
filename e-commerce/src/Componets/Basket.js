@@ -18,12 +18,6 @@ function Basket() {
     dispatch(deleteFromBasket(item));
   };
 
-  // Function ti get total price
-  // const getPriceForItem = (qty, price) => {
-  //   console.log("get price", qty * price);
-  //   return qty * price;
-  // };
-
   // Function to display if the basket is empty
   const emptyBasket = () => {
     return (
@@ -41,12 +35,7 @@ function Basket() {
           <li className="row ">
             <div className="col left">
               <div className="image">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  height="200px"
-                  width="180px"
-                />
+                <img src={product.image} alt={product.title} />
               </div>
               <div className="details">
                 <div className="title">
@@ -54,7 +43,9 @@ function Basket() {
                 </div>
               </div>
               <div className="price">
-                <h4 data-testid="item-qty">Qty: {product.qty}</h4>
+                <h4 data-testid="item-qty" className="qty">
+                  Qty: {product.qty}
+                </h4>
                 <h4 className="total">
                   Total Price
                   <span className="total-price">
@@ -66,19 +57,19 @@ function Basket() {
                 <div className="add">
                   <button
                     className="btn-dark"
-                    onClick={() => handleDel(product)}
-                  >
-                    <AiOutlineMinusCircle className="icon" />
-                  </button>
-                </div>
-                <div className="remove">
-                  <button
-                    className="btn-dark"
                     data-testid="btn-add"
                     onClick={() => handleAdd(product)}
                   >
                     <AiOutlinePlusCircle className="icon" />
                   </button>
+                  <div className="remove">
+                    <button
+                      className="btn-dark"
+                      onClick={() => handleDel(product)}
+                    >
+                      <AiOutlineMinusCircle className="icon" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -100,6 +91,7 @@ function Basket() {
   //     </>
   //   );
   // };
+  console.log(state.length);
 
   return (
     <div>

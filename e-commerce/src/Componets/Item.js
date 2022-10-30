@@ -53,7 +53,7 @@ function Item() {
                the only one way I could fix that bug to change tags
               
               */}
-              <div className="description">{item.description}</div>
+              <p className="description">{item.description}</p>
               <div className="info">
                 <h4>
                   Rating {item.rating && item.rating.rate}

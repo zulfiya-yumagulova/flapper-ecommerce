@@ -6,8 +6,8 @@ h2 {
 /* Categories Style */
 .categories {
   display: flex;
-  justify-content: center;
-  margin: 30px;
+  justify-content: space-evenly;
+  /* margin: 30px; */
 }
 
 .category {
@@ -27,7 +27,7 @@ h2 {
   grid-row: 1rem;
   gap: 2rem;
   justify-content: center;
-  margin: 15rem auto;
+  margin: 2rem auto;
 }
 
 .item-container {
@@ -118,7 +118,7 @@ input:focus {
   .grid-container {
     grid-template-columns: 1fr 1fr;
     gap: 1.2rem;
-    margin-top: 450px;
+    margin-top: 50px;
   }
 
   input {
@@ -137,11 +137,21 @@ input:focus {
   .grid-container {
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin-left: 50px;
-    margin-top: 350px;
   }
 
   input {
-    width: 300px;
+    width: 250px;
+    margin-left: 30px;
+  }
+
+  .categories {
+    margin-left: 3rem;
+  }
+
+  .category {
+    margin: none;
+    height: 40px;
+    width: 80px;
+    font-size: 12px;
   }
 }

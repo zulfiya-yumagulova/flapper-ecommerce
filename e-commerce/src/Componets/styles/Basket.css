@@ -25,6 +25,10 @@
   margin-left: 1rem;
 }
 
+.qty {
+  margin-top: 6rem;
+}
+
 .col.right {
   width: 30%;
   position: absolute;
@@ -45,5 +49,5 @@
 }
 
 .remove {
-  margin: 1rem;
+  margin-top: 1rem;
 }

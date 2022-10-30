@@ -53,13 +53,13 @@ function ItemsComponent() {
             className="btn-dark category"
             onClick={() => setFilterItems("men's clothing")}
           >
-            Men's Clothing
+            Men
           </button>
           <button
             className="btn-dark category"
             onClick={() => setFilterItems("women's clothing")}
           >
-            Women's Closing
+            Women
           </button>
           <button
             className="btn-dark category"
