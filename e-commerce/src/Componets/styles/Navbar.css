@@ -1,29 +1,53 @@
-/* Style navbar */
-.navbar {
-  background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+/* Nav Bar Styling */
 
-.navbar .logo {
-  font-weight: 700;
-  font-size: 21px;
-  margin: 15px;
-  color: var(--secondary-dark-color);
-}
-
-.navbar .navbar-items a {
-  color: var(--secondary-dark-color);
-  font-size: 16px;
+a {
   text-decoration: none;
-  margin: 50px 0 15px 15px;
-  position: relative;
-  opacity: 0.9;
+}
+li {
+  list-style-type: none;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  box-shadow: rgba(50, 50, 93, 0.23) 0px 30px 30px -20px;
+}
+.logo {
+  font-size: 30px;
+}
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  width: 75%;
+  margin: 30px;
 }
 
+.nav-links li {
+  color: black;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.hero {
+  text-align: center;
+  margin-top: 15%;
+}
+.hero h1 {
+  text-align: center;
+  font-size: 80px;
+}
+.mobile-menu-icon {
+  display: none;
+}
+button {
+  border: none;
+  text-decoration: none;
+  font-size: 20px;
+  background: none;
+}
 /* Creating a circle with number of items */
 .num-items {
   color: #fff;
@@ -32,7 +56,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  transform: translate(-75%, -25%);
+  transform: translate(-425%, -2095%);
   border-radius: 50%;
   background-color: red;
   display: flex;
@@ -53,64 +77,56 @@
   margin: 10px 30px;
 }
 
-/* user icon */
-.user {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 1rem;
-  color: #4d77ff;
+.basket {
+  margin-top: 10px;
 }
 
-.navbar .navbar-toggle {
-  display: none;
-}
-
-/* Add media query */
-
-@media (max-width: 700px) {
-  .navba > .navbar-items {
-    position: absolute;
-    top: 60px;
+/* =======Mobile====== */
+@media (max-width: 768px) {
+  .logo {
     display: flex;
-    flex-direction: column;
-    background-color: var(--primary-dark-color);
-    left: 0;
+    position: absolute;
+    top: 15px;
+    left: 35px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links-mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px;
+    top: 10%;
+    transition: all 0.5s ease-in-out;
     width: 100%;
-    height: 100%;
+    background-color: white;
   }
-  .navbar-toggle {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  ul li {
+    padding: 52px;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    color: var(--secondary-dark-color);
   }
-
-  .navbar-toggle > .bar {
-    position: relative;
-    width: 32px;
-    height: 2px;
-    background-color: var(--secondary-dark-color);
-  }
-
-  .navbar-toggle > .bar::before,
-  .navbar-toggle > .bar::after {
-    content: "";
+  .mobile-menu-icon {
     position: absolute;
-    height: 2px;
-    border-radius: 2px;
-    transition: all 0.45s ease-in-out;
+    display: block;
+    right: 20px;
+  }
+  .hero h1 {
+    font-size: 50px;
+  }
+  .basket {
+    position: absolute;
+    display: block;
+    top: 70%;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    margin: 50px 30px 20rem 20rem;
   }
 
-  .navbar-toggle > .bar::before {
-    width: 25px;
-    transform: translateY(-8px);
-    right: 0;
-  }
-
-  .navbar-toggle > .bar::after {
-    width: 32px;
-    transform: translateY(8px);
+  .num-items {
+    transform: translate(25%, 25%);
   }
 }

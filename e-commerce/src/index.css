@@ -20,6 +20,7 @@ body {
   font-family: "Lato", sans-serif;
   color: var(--color-font);
   height: 100vh;
+  background-color: #fff;
 }
 
 .container {
@@ -79,4 +80,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+@media screen and (max-width: 790px) {
+  body {
+    width: 90%;
+  }
 }

@@ -36,8 +36,10 @@
   top: calc(50% - 30%);
 }
 
-.details .title {
-  font-size: 1rem;
+.details .basket-title {
+  font-size: 16px;
+  color: var(--color-font);
+  margin-top: 30px;
 }
 
 .details .price {
@@ -50,4 +52,9 @@
 
 .remove {
   margin-top: 1rem;
+}
+
+.emty-basket {
+  text-align: center;
+  margin-top: 5rem;
 }

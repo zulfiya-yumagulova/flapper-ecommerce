@@ -68,7 +68,7 @@ img {
 }
 
 /* style doesn't apply */
-.btn-buy a .btn-link {
+.btn-buy .btn-link {
   text-decoration: none;
   color: var(--btn-light-color);
 }

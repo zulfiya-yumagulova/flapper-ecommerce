@@ -1,36 +1,46 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs";
+import { FaBars } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
 import "./styles/Navbar.css";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [mobile, setMobile] = useState(true);
 
   const state = useSelector((state) => state.basketReducer);
 
   return (
-    <div className="navbar">
-      <span className="logo">Logo</span>
-      <div className="navbar-items">
-        <NavLink to="/">Home</NavLink>
-        <a href="#contact">Contact</a>
-        <NavLink to="/products">All Clothing</NavLink>
-        <NavLink to="/signup">Sing Up</NavLink>
-        <NavLink to="/user">
-          <AiOutlineUser />
-        </NavLink>
-
-        <NavLink to="/basket">
-          <BsFillCartFill id="basket" />
-          <div className="num-items ">{state.length} </div>
-        </NavLink>
-      </div>
-      <div className="navbar-toggle" onClick={() => setIsOpen(isOpen)}>
-        <div className="bar"></div>
-      </div>
-    </div>
+    <>
+      <nav className="navbar">
+        <h3 className="logo">Logo</h3>
+        <ul
+          className={mobile ? "nav-links-mobile" : "nav-links"}
+          onClick={() => setMobile(false)}
+        >
+          <Link to="/" className="home">
+            <li>Home</li>
+          </Link>
+          <Link to="/products" className="about">
+            <li>All Clothing</li>
+          </Link>
+          <Link to="/signup" className="signup">
+            <li>Sign Up</li>
+          </Link>
+          <div className="basket">
+            <Link to="/basket">
+              <BsFillCartFill id="basket" />
+              <div className="num-items ">{state.length} </div>
+            </Link>
+          </div>
+        </ul>
+        <button className="mobile-menu-icon" onClick={() => setMobile(!mobile)}>
+          {mobile ? <ImCross /> : <FaBars />}
+        </button>
+      </nav>
+    </>
   );
 }
 

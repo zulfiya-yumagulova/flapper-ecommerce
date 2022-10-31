@@ -22,7 +22,7 @@ function Basket() {
   const emptyBasket = () => {
     return (
       <div className="emty-basket" data-testid="empty-basket">
-        <h3>Your Basket Is Empty</h3>
+        <h3 className="emty-basket"> Your Basket Is Empty</h3>
       </div>
     );
   };
@@ -38,7 +38,7 @@ function Basket() {
                 <img src={product.image} alt={product.title} />
               </div>
               <div className="details">
-                <div className="title">
+                <div className="basket-title">
                   <h3>{product.title}</h3>
                 </div>
               </div>
@@ -49,7 +49,7 @@ function Basket() {
                 <h4 className="total">
                   Total Price
                   <span className="total-price">
-                    {getPriceForItem(product.qty, product.price)}
+                    £{getPriceForItem(product.qty, product.price)}
                   </span>
                 </h4>
               </div>

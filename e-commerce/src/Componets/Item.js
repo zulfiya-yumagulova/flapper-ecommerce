@@ -44,15 +44,10 @@ function Item() {
         <div className="row">
           <div className="column-left">
             <h1 className="title">{item.title}</h1>
-            <img src={item.image} alt={item.title}></img>
+            <img src={item.image} alt={item.title} className='card-image'></img>
           </div>
           <div className="column">
             <div className="column-right">
-              {/* I used a div instead of <p></p> tag because I have no idia why and how it happend
-               but if I use <p></p> tag all fetched data is disappered and 
-               the only one way I could fix that bug to change tags
-              
-              */}
               <p className="description">{item.description}</p>
               <div className="info">
                 <h4>

@@ -20,14 +20,14 @@ function Home() {
         }}
       >
         <div className="overlay">
-          <h1>e-Shop</h1>
+          <h1 className="heading">e-Shop</h1>
         </div>
       </div>
       <div className="circles">
         <div className="circle-1">
           <div className="circle-text">
             <h2 className="header">Our Brand</h2>
-            <p className="text">
+            <p className="circle-text">
               We aim empower you to look and feel confident. To increase your
               self-esteem and body positivity to help you realise your true
               potential.

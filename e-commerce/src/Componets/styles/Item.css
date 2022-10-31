@@ -25,15 +25,16 @@
 }
 
 .column-left img {
-  margin-top: -19rem;
+  /* margin-top: 3rem; */
 }
 
 .column-right {
-  margin: 2rem;
+  margin: 20px;
 }
 
 #btn-add {
-  margin: 2rem 1rem;
+  margin-top: 2rem;
+  margin-right: 1rem;
 }
 
 /* insteat of p tag I used div tag to display description */
@@ -63,10 +64,13 @@ h1 {
   margin: 2rem;
 }
 
+.card-image {
+  margin-top: -10rem;
+}
 /* =======Media Queries (Tablets)========= */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .column-left img {
-    margin-top: 5rem;
+    margin-top: -13rem;
   }
 
   .column-right {
@@ -80,9 +84,5 @@ h1 {
 
   .info {
     margin-left: 1rem;
-  }
-
-  .buttons {
-    margin-left: 4rem;
   }
 }

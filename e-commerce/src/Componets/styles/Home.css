@@ -7,7 +7,7 @@ header {
 }
 
 .overlay {
-  height: 400px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,9 +39,9 @@ header {
   align-items: center;
   margin-top: 50px;
   padding: 0;
-  width: 100vw;
-  max-width: 100%;
-  height: auto;
+  /* width: 100%; */
+  /* max-width: 100%; */
+  /* height: auto; */
 }
 
 .circle-1 {
@@ -74,9 +74,8 @@ header {
   box-shadow: 0 5px 20px rgba(88 88 88 /20%);
 }
 
-h1 {
-  color: var(--primary-color);
-  font-size: 26px;
+.heading {
+  color: #fff;
   margin: 30px 30px;
 }
 
@@ -84,21 +83,33 @@ h2 {
   color: var(--primary-color);
 }
 .circle-text {
-  margin: 60px 30px;
+  margin: 40px 30px;
   font-size: 15px;
   color: #fff;
   line-height: 1/6;
 }
 
-.btn {
+/* .btn {
   margin: 1rem;
-}
+} */
 
 /*======== Media Queries (Mobies and Tablets)====== */
 @media screen and (max-width: 790px) {
   .circles {
-    display: flex;
     flex-direction: column;
-    margin-left: 2.5rem;
+    margin-right: 0;
+    width: 90%;
+  }
+  .circle-1 {
+    margin-top: 30px;
+  }
+  .circle-2 {
+    margin: 30px;
+  }
+  .circle-3 {
+    margin: 30px;
+  }
+
+  .overlay {
   }
 }
