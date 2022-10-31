@@ -19,7 +19,7 @@
 body {
   font-family: "Lato", sans-serif;
   color: var(--color-font);
-  height: 100vh;
+  min-height: 100vh;
   background-color: #fff;
 }
 
@@ -71,19 +71,16 @@ body {
   transition: all 200ms;
 }
 
-.about-link {
+/* .about-link {
   display: flex;
   justify-content: flex-end;
   margin: 30px;
   color: var(--color-font);
-}
+} */
 
-a {
+/* a {
   text-decoration: none;
-}
+} */
 
 @media screen and (max-width: 790px) {
-  body {
-    width: 90%;
-  }
 }

@@ -8,7 +8,7 @@ import { ImCross } from "react-icons/im";
 import "./styles/Navbar.css";
 
 function Navbar() {
-  const [mobile, setMobile] = useState(true);
+  const [mobile, setMobile] = useState(false);
 
   const state = useSelector((state) => state.basketReducer);
 
@@ -17,6 +17,7 @@ function Navbar() {
       <nav className="navbar">
         <h3 className="logo">Logo</h3>
         <ul
+          id="nav-links-mobiles"
           className={mobile ? "nav-links-mobile" : "nav-links"}
           onClick={() => setMobile(false)}
         >

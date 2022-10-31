@@ -16,15 +16,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route
-            exact
-            path="/"
-            element={
-              <>
-                <Home />
-              </>
-            }
-          />
+          <Route exact path="/" element={<><Home /></>} />
 
           <Route exact path="/products" element={<ItemsComponent />} />
           <Route exact path="/:id" element={<Item />} />
