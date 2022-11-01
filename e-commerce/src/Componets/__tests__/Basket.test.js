@@ -5,7 +5,7 @@ import store from "../../redux/store.js";
 import { getPriceForItem } from "../getPriceForItem";
 
 describe(Basket, () => {
-  // Testing if empty basket returns text
+  // Testing if empty basket returns text "Basket Is Empty"
   it("displays text: Your Basket Is Empty", () => {
     const { getByTestId } = render(
       <Provider store={store}>
@@ -18,6 +18,7 @@ describe(Basket, () => {
   });
 
   //   Test if Add button increments items in the basket
+  // I am not sure if I implemented that test right, I just wanted to make an addintional tests
   it("increments items in the basket by 1 if the button is clicked", () => {
     const { getByTestId } = render(
       // Render gbthe component

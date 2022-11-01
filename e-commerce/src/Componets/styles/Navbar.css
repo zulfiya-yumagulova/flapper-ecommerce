@@ -85,7 +85,7 @@ button {
 }
 
 /* =======Mobile====== */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .logo {
     display: flex;
     position: absolute;
@@ -99,6 +99,8 @@ button {
     position: absolute;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px;
     top: 10%;
@@ -118,7 +120,7 @@ button {
   .mobile-menu-icon {
     position: absolute;
     display: block;
-    /* justify-content: center; */
+    justify-content: center;
     right: 20px;
   }
   .hero h1 {
@@ -130,8 +132,7 @@ button {
     top: 70%;
     transition: all 0.5s ease-in-out;
     width: 50px;
-
-    margin-left: 320px;
+    margin-right: 50px;
   }
 
   .num-items {

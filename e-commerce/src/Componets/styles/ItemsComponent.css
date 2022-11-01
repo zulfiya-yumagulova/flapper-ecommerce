@@ -125,9 +125,11 @@ input:focus {
     margin-left: -70px;
     margin-right: 0;
   }
-
   .btn-search {
-    /* margin-left: 10px; */
+    margin-left: 10px;
+  }
+
+  .categories {
   }
 }
 
@@ -144,7 +146,7 @@ input:focus {
   }
 
   .categories {
-    margin-left: 3rem;
+    margin-right: 15px;
   }
 
   .category {
@@ -152,5 +154,6 @@ input:focus {
     height: 40px;
     width: 80px;
     font-size: 12px;
+    margin: 0 10px;
   }
 }

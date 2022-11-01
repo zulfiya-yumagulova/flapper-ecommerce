@@ -25,7 +25,7 @@ function Home() {
       </div>
       <div className="circles">
         <div className="circle-1">
-          <div className="circle-text">
+          <div>
             <h2 className="header">Our Brand</h2>
             <p className="circle-text">
               We aim empower you to look and feel confident. To increase your

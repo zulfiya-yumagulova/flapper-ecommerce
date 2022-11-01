@@ -8,13 +8,19 @@ import { getPriceForItem } from "./getPriceForItem";
 import "./styles/Basket.css";
 
 function Basket() {
+  // Fetching products what I have in Redux Store
   const state = useSelector((state) => state.basketReducer);
+  // Adding the data fetched from the server to the store
   const dispatch = useDispatch();
   console.log("state: ", state);
-  const handleAdd = (item) => {
+
+  // Add a product to the basket
+  const addItem = (item) => {
     dispatch(addToBasket(item));
   };
-  const handleDel = (item) => {
+
+  // Remove a product from the basket
+  const removeItem = (item) => {
     dispatch(deleteFromBasket(item));
   };
 
@@ -58,16 +64,16 @@ function Basket() {
                   <button
                     className="btn-dark"
                     data-testid="btn-add"
-                    onClick={() => handleAdd(product)}
+                    onClick={() => addItem(product)}
                   >
-                    <AiOutlinePlusCircle className="icon" />
+                    <AiOutlinePlusCircle className="basket-icon" />
                   </button>
                   <div className="remove">
                     <button
                       className="btn-dark"
-                      onClick={() => handleDel(product)}
+                      onClick={() => removeItem(product)}
                     >
-                      <AiOutlineMinusCircle className="icon" />
+                      <AiOutlineMinusCircle className="basket-icon" />
                     </button>
                   </div>
                 </div>
@@ -78,26 +84,22 @@ function Basket() {
       </section>
     );
   };
-  // const buttons = () => {
-  //   return (
-  //     <>
-  //       <div className="container">
-  //         <div className="row">
-  //           <Link to="/checkout" className="btn btn-dark ">
-  //             Proceed to Checkout
-  //           </Link>
-  //         </div>
-  //       </div>
-  //     </>
-  //   );
-  // };
+  const button = () => {
+    return (
+      <div className="btn-container">
+        <Link to="/checkout" className="btn-checkout btn-dark ">
+          Checkout
+        </Link>
+      </div>
+    );
+  };
   console.log(state.length);
 
   return (
     <div>
       {state.length === 0 && emptyBasket()}
       {state.length !== 0 && state.map(basketItems)}
-      {/* {state.length !== 0 && buttons()} */}
+      {state.length !== 0 && button()}
     </div>
   );
 }

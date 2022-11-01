@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Outfit:wght@300&family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;500&display=swap");
 
+/* I decieded do not use any ui libruary to be honest and show you my skills
+ and what can I do. All styles I created by myself and did the app as much responsive
+as I can do on my own without any help. Just Google =))
+
+*/
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -69,18 +75,4 @@ body {
   padding: 10px 12px;
   text-align: center;
   transition: all 200ms;
-}
-
-/* .about-link {
-  display: flex;
-  justify-content: flex-end;
-  margin: 30px;
-  color: var(--color-font);
-} */
-
-/* a {
-  text-decoration: none;
-} */
-
-@media screen and (max-width: 790px) {
 }

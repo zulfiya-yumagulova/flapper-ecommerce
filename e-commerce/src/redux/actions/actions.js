@@ -1,5 +1,7 @@
 import { ActionTypes } from "./actionTypes";
 
+// Creating actions
+
 // For add item to the basket
 export const addToBasket = (product) => {
   return {

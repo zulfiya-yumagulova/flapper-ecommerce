@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import "./styles/ItemsComponent.css";
 
@@ -22,6 +23,7 @@ function ItemsComponent() {
     fetchedData();
   }, []);
 
+  // Function to prevent reloading page
   const handleSubmit = (e) => {
     e.preventDefault();
   };

@@ -1,9 +1,12 @@
 import { ActionTypes } from "../actions/actionTypes";
 
+// Initial state
 const basket = [];
+
+// Creating Reducer
 const basketReducer = (state = basket, action) => {
   const product = action.payload;
-
+  console.log(product);
   switch (action.type) {
     case ActionTypes.ADD_TO_BASKET:
       // Check if the item is already in the basket
@@ -14,7 +17,6 @@ const basketReducer = (state = basket, action) => {
           item.id === product.id ? { ...item, qty: item.qty + 1 } : item
         );
       } else {
-        // const product = action.payload;
         return [
           ...state,
           {
@@ -36,6 +38,8 @@ const basketReducer = (state = basket, action) => {
         qty: item.qty - 1,
       }));
       // Remove product from the basket if it's qty is 0
+      // That function stops at 0 and returns "Empty Basket" text
+      // instead of count below 0 (-1,-2 etc)
       const removeZeroQty = updatedItems.filter((item) => item.qty > 0);
       const newState = [...unchangedItems, ...removeZeroQty];
       console.log(newState);
